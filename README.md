@@ -62,11 +62,15 @@ ShetkarAI aligns with the following UN Sustainable Development Goals:
 
 ## Setup Instructions
 
-### Backend Setup
+### Prerequisites
+- Python 3.8 or higher
+- Git
 
-1. Navigate to the project root directory:
+### Installation
+1. Clone the repository:
    ```
-   cd ShetkarAI
+   git clone <repository-url>
+   cd <repository-folder>
    ```
 
 2. Create and activate a virtual environment:
@@ -80,47 +84,37 @@ ShetkarAI aligns with the following UN Sustainable Development Goals:
    pip install -r requirements.txt
    ```
 
-4. Run the development server:
+4. Set up environment variables:
+   ```
+   cp .env.example .env
+   ```
+   Then edit the `.env` file and add your actual configuration values.
+
+### Development
+1. Run the development server:
    ```
    python app.py
    ```
+   The application will be available at http://localhost:5001
 
-The server will start at http://localhost:5000
+## Project Structure
+- `app.py`: Main application entry point
+- `backend/`: Server-side code
+  - `api/`: API routes
+  - `templates/`: HTML templates
+  - `static/`: Static assets
+  - `utils/`: Utility functions
 
-### Mobile App Setup
+## Git Ignore
+The project includes a `.gitignore` file that prevents committing:
+- Python bytecode files
+- Virtual environment directories
+- Environment variables (.env)
+- Logs and temporary files
+- IDE/editor specific files
+- Uploaded files in `backend/static/uploads/`
 
-1. Make sure you have Flutter installed: [Flutter Installation Guide](https://flutter.dev/docs/get-started/install)
-
-2. Navigate to the mobile app directory:
-   ```
-   cd mobile/shetkar_ai
-   ```
-
-3. Install dependencies:
-   ```
-   flutter pub get
-   ```
-
-4. Update the API endpoint in `lib/config/api_config.dart` to point to your backend server
-
-5. Run the app:
-   ```
-   flutter run
-   ```
-
-## API Documentation
-
-The backend exposes a RESTful API that the mobile app interacts with. When the server is running, you can access the API documentation by visiting:
-
-```
-http://localhost:5000/
-```
-
-Key endpoints include:
-- `GET /api/health` - API health check
-- `POST /api/detect-disease` - Plant disease detection (simulated)
-- `POST /api/analyze-soil` - Soil analysis (simulated)
-- `GET /api/weather` - Weather data and recommendations
+Make sure to keep your sensitive information in the `.env` file which will not be committed to the repository.
 
 ## Technologies Used
 
