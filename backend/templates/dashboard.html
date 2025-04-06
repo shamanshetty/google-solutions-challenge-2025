@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="{{ language }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ translations.app_title }}</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5F5;
+            color: #333;
+        }
+        .header {
+            background-color: #2E7D32;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .user-nav {
+            display: flex;
+            align-items: center;
+        }
+        .user-name {
+            margin-right: 15px;
+        }
+        .logout-btn {
+            background-color: #E8F5E9;
+            color: #2E7D32;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+        .logout-btn:hover {
+            background-color: #C8E6C9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .welcome-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .welcome-title {
+            color: #2E7D32;
+            margin-top: 0;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .feature-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .feature-card h3 {
+            color: #2E7D32;
+            margin-top: 0;
+        }
+        .feature-card p {
+            color: #666;
+        }
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #4CAF50;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+        .language-switcher {
+            margin-left: 20px;
+        }
+        .language-switcher select {
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">ShetkarAI</div>
+        <div class="user-nav">
+            <span class="user-name">{{ translations.welcome }}, {{ username }}</span>
+            <form action="{{ url_for('change_language') }}" method="post" class="language-switcher">
+                <select name="language" onchange="this.form.submit()">
+                    <option value="en" {% if language == 'en' %}selected{% endif %}>{{ translations.english }}</option>
+                    <option value="hi" {% if language == 'hi' %}selected{% endif %}>{{ translations.hindi }}</option>
+                </select>
+            </form>
+            <form action="{{ url_for('logout') }}" method="post">
+                <button type="submit" class="logout-btn">{{ translations.logout }}</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="welcome-card">
+            <h2 class="welcome-title">{{ translations.welcome }}, {{ username }}!</h2>
+            <p>{{ translations.app_title }}</p>
+        </div>
+
+        <div class="features-grid">
+            <a href="{{ url_for('detect_disease_page') }}" class="feature-card">
+                <div class="feature-icon">🌿</div>
+                <h3>{{ translations.detect_disease }}</h3>
+                <p>{{ translations.detect_disease_desc }}</p>
+            </a>
+            <a href="{{ url_for('analyze_soil_page') }}" class="feature-card">
+                <div class="feature-icon">🌱</div>
+                <h3>{{ translations.analyze_soil }}</h3>
+                <p>{{ translations.analyze_soil_desc }}</p>
+            </a>
+            <a href="{{ url_for('weather_page') }}" class="feature-card">
+                <div class="feature-icon">☁️</div>
+                <h3>{{ translations.weather }}</h3>
+                <p>{{ translations.weather_desc }}</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        ShetkarAI &copy; 2023 - {{ translations.app_title }}
+    </div>
+</body>
+</html> 

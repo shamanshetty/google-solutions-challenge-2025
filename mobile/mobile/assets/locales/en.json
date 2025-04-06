@@ -1,0 +1,172 @@
+{
+  "app": {
+    "title": "KisanSaathi",
+    "tagline": "Empowering Indian Farmers with AI"
+  },
+  "home": {
+    "welcome": "Welcome, {username}!",
+    "weather": "Weather",
+    "soil": "Soil Analysis",
+    "disease": "Disease Detection",
+    "community": "Community",
+    "settings": "Settings",
+    "logout": "Logout",
+    "what_to_do": "What would you like to do today?",
+    "offline_message": "You are currently offline. Some features may be limited.",
+    "features": {
+      "disease_detection": "Detect Plant Disease",
+      "soil_analysis": "Analyze Soil",
+      "weather": "Weather Info",
+      "help_about": "Help & About"
+    }
+  },
+  "disease_detection": {
+    "title": "Plant Disease Detection",
+    "instructions": {
+      "title": "How to use:",
+      "step1": "1. Take a clear photo of the plant leaf or affected area",
+      "step2": "2. Make sure the leaf is well-lit and in focus",
+      "step3": "3. Tap the analyze button to detect diseases"
+    },
+    "no_image": "No image selected",
+    "take_photo": "Take Photo",
+    "gallery": "Gallery",
+    "analyze": "Analyze Image",
+    "analyzing": "Analyzing...",
+    "offline_warning": "You are offline. Please connect to the internet to analyze images.",
+    "results": "Results:",
+    "confidence": "Confidence:",
+    "recommendations": "Recommendations:",
+    "no_recommendations": "No specific recommendations available."
+  },
+  "soil_analysis": {
+    "title": "Soil Analysis",
+    "instructions": {
+      "title": "How to use:",
+      "step1": "1. Take a clear photo of the soil sample",
+      "step2": "2. Make sure the soil is visible and well-lit",
+      "step3": "3. Tap the analyze button to assess soil properties"
+    },
+    "no_image": "No image selected",
+    "take_photo": "Take Photo",
+    "gallery": "Gallery",
+    "analyze": "Analyze Soil",
+    "analyzing": "Analyzing...",
+    "offline_warning": "You are offline. Please connect to the internet to analyze images.",
+    "results": "Results:",
+    "soil_type": "Soil Type:",
+    "properties": {
+      "title": "Soil Properties:",
+      "ph": "pH:",
+      "nitrogen": "Nitrogen (N):",
+      "phosphorus": "Phosphorus (P):",
+      "potassium": "Potassium (K):",
+      "organic_matter": "Organic Matter:"
+    },
+    "recommendations": "Recommendations:",
+    "no_recommendations": "No specific recommendations available."
+  },
+  "weather": {
+    "title": "Weather Information",
+    "current_location": "Current Location",
+    "current_weather": "Current Weather",
+    "no_data": "No weather data available",
+    "get_weather": "Get Weather",
+    "fetching": "Fetching...",
+    "offline": "You are offline. Please connect to the internet to get weather updates.",
+    "location_disabled": "Location services are disabled.",
+    "location_denied": "Location permissions are denied.",
+    "location_denied_forever": "Location permissions are permanently denied, we cannot request permissions.",
+    "location_error": "Error getting location: {error}",
+    "location_unavailable": "Location not available",
+    "weather_error": "Error fetching weather data: {error}",
+    "humidity": "Humidity",
+    "recommendations": "Farming Recommendations",
+    "location_permission": {
+      "title": "Location Permission Required",
+      "message": "This feature needs location permission to provide weather data for your area.",
+      "grant": "Grant Permission",
+      "cancel": "Cancel"
+    }
+  },
+  "common": {
+    "app_name": "KisanSaathi",
+    "tagline": "Empowering Indian Farmers with AI",
+    "continue": "Continue",
+    "retry": "Retry",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete"
+  },
+  "about": {
+    "title": "About KisanSaathi",
+    "description": "KisanSaathi is an AI-powered mobile application designed to empower Indian smallholder farmers through accessible technology.",
+    "features_title": "Features:",
+    "features": {
+      "disease": "• AI-powered crop monitoring and diagnosis",
+      "soil": "• Basic soil health analysis",
+      "weather": "• Weather-based recommendations",
+      "interface": "• Simple, voice-first multilingual interface",
+      "offline": "• Offline functionality for core features"
+    },
+    "version": "Version 1.0.0"
+  },
+  "language_selector": {
+    "title": "Select Language",
+    "english": "English",
+    "hindi": "हिन्दी (Hindi)"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "username": "Username",
+    "login_to": "Login to KisanSaathi",
+    "register_for": "Register for KisanSaathi",
+    "login_failed": "Login failed. Please check your credentials.",
+    "register_failed": "Registration failed. Please try again.",
+    "enter_email": "Please enter your email",
+    "enter_valid_email": "Please enter a valid email",
+    "enter_username": "Please enter a username",
+    "enter_password": "Please enter your password",
+    "password_length": "Password must be at least 6 characters",
+    "no_account": "Don't have an account? Register",
+    "have_account": "Already have an account? Login"
+  },
+  "language": {
+    "select": "Select Your Language",
+    "subtitle": "Choose your preferred language to use KisanSaathi"
+  },
+  "splash": {
+    "initializing": "Initializing...",
+    "checking_server": "Checking server connection...",
+    "loading_resources": "Loading resources...",
+    "connection_error": "Unable to connect to server. Please try again.",
+    "no_internet": "No internet connection. Some features may be limited.",
+    "init_error": "Error initializing app: {error}"
+  },
+  "soil": {
+    "title": "Soil Analysis",
+    "instructions": "Instructions:",
+    "instruction1": "1. Take a close-up photo of your field soil.",
+    "instruction2": "2. Capture dry soil, avoid night photos.",
+    "instruction3": "3. Take photo in sunlight without shadows.",
+    "no_image": "No image selected",
+    "camera": "Camera",
+    "gallery": "Gallery",
+    "analyze": "Analyze Soil",
+    "offline": "You are offline. Internet connection is required for soil analysis.",
+    "analysis_results": "Soil Analysis Results:",
+    "soil_type": "Soil Type:",
+    "soil_properties": "Soil Properties:",
+    "ph": "pH:",
+    "nitrogen": "Nitrogen:",
+    "phosphorus": "Phosphorus:",
+    "organic_matter": "Organic Matter:",
+    "recommendations": "Recommendations:"
+  }
+} 

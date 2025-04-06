@@ -1,0 +1,2 @@
+Please add the KisanSaathi logo image (1.jpg) to this folder. 
+The logo should be named "logo.png" for proper loading in the app. 
