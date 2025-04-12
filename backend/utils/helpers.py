@@ -1,5 +1,4 @@
 import os
-import numpy as np
 from werkzeug.utils import secure_filename
 from flask import current_app
 import requests
