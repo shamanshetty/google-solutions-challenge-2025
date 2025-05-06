@@ -6,6 +6,7 @@ from backend.utils.config import Config
 from backend.utils.translations import get_text
 from backend.utils.supabase import register_user, login_user, get_user_profile, update_language_preference
 
+
 app = Flask(__name__, 
             static_folder='backend/static',
             template_folder='backend/templates')
